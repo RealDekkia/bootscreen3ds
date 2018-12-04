@@ -327,12 +327,14 @@ function redraw() {
             write(0, curDimensions.lh * 8, 'Memory Testing       : 4194304K OK');
             break;
     }
+    
 
-    var nandSize = document.getElementById("nandSize").value;
-    if (nandSize && nandSize > 0) {
-        write(0, curDimensions.lh * 9, 'Detecting Primary Master ... ' + nandSize + 'G Internal Memory');
+    var nandSize = $('select[name=nandSize] option:selected', "#settings").val();
+
+    if (nandSize>0) {
+        write(0, curDimensions.lh * 9, 'Detecting Primary Master ... ' + nandSize + 'GB Internal Memory');
     } else {
-        write(0, curDimensions.lh * 9, 'Detecting Primary Master ... ' + processor / 2 + 'G Internal Memory');
+        write(0, curDimensions.lh * 9, 'Detecting Primary Master ... ' + processor / 2 + 'GB Internal Memory');
     }
 
 
@@ -347,12 +349,12 @@ function redraw() {
     var boot_bool = $('input[name=hold]', "#settings").is(':checked');
     var boot_keys = $('select[name=onboot] option:selected', "#settings").val();
     var boot_tool = $('input[name=boottool]', "#settings").val();
-    var boot_text = '_Hold ' + boot_keys + ' ' + $('select[name=firstTime] option:selected').text() + '_ to enter _' + boot_tool + '_.';
+    var boot_text = '_Hold ' + boot_keys + ' ' + $('select[name=firstTime] option:selected').text() + '_ to enter _' + boot_tool + '_';
 
     var aux_bool = $('input[name=secondLine]', "#settings").is(':checked');
     var aux_keys = $('select[name=secondButton] option:selected').val();
     var aux_tool = $('input[name=secondTool]').val();
-    var aux_text = '_Hold ' + aux_keys + ' ' + $('select[name=secondTime] option:selected').text() + '_ to enter _' + aux_tool + '_.';
+    var aux_text = '_Hold ' + aux_keys + ' ' + $('select[name=secondTime] option:selected').text() + '_ to enter _' + aux_tool + '_';
 
     var bottomText1Y = 13;
     var bottomText2Y = 14;

@@ -85,31 +85,8 @@
 							<option value="JPN">JPN</option>
 						</select>
                         <label>Region</label>
-                    </div>
-                    <div class="input-field col s6 m5">
-                        <select name="sd" class="form-control">
-							<option value="No">None</option>
-							<option value="2G">2GB</option>
-							<option value="4G" selected="selected">4GB</option>
-							<option value="8G">8GB</option>
-							<option value="16G">16GB</option>
-							<option value="32G">32GB</option>
-							<option value="64G">64GB</option>
-							<option value="128G">128GB</option>
-							<option value="200G">200GB</option>
-							<option value="256G">256GB</option>
-                            <option value="512G">512GB</option>
-                            <option value="1024G">1024GB</option>
-						</select>
-                        <label>SD Card</label>
 					</div>
-					
-					<div class="input-field col s6 m3">
-						<input type="number" id="nandSize"></input>
-						<label>Internal Storage</label>
-					</div>
-
-                    <div class="input-field col s12 m5">
+					<div class="input-field col s12 m5">
                         <select name="type" class="form-control">
 							<option value="luma2017">Luma3DS</option>
 							<option value="luma2017">Luma3DS hourly</option>
@@ -143,12 +120,41 @@
 							<option value="menuhax2016">Menuhax v2.2</option>
 							<option value="menuhax2015">Menuhax v2.1</option>
                             <option value="reiNX2018">ReiNX</option>
-                            <option value="atmosphereNX2018">Atmosphère</option>
+                            <option value="atmosphereNX2018">AtmosphÃ¨re</option>
                             <option value="lakkaNX2018">Lakka</option>
                             <option value="sxOSNX2018">SX OS</option>
 						</select>
                         <label>Type</label>
-                    </div>
+					</div>
+
+					<div class="input-field col s6 m3">
+						<select name="nandSize" class="form-control">
+							<option value="0" selected="selected">Default</option>
+							<option value="64">64GB</option>
+							<option value="128">128GB</option>
+							<option value="256">256GB</option>
+						</select>
+						<label>Internal Storage</label>
+					</div>
+
+                    <div class="input-field col s6 m5">
+                        <select name="sd" class="form-control">
+							<option value="No">None</option>
+							<option value="2G">2GB</option>
+							<option value="4G" selected="selected">4GB</option>
+							<option value="8G">8GB</option>
+							<option value="16G">16GB</option>
+							<option value="32G">32GB</option>
+							<option value="64G">64GB</option>
+							<option value="128G">128GB</option>
+							<option value="200G">200GB</option>
+							<option value="256G">256GB</option>
+                            <option value="512G">512GB</option>
+                            <option value="1024G">1024GB</option>
+						</select>
+                        <label>SD Card</label>
+					</div>
+ 
                     <div class="input-field col s12 m3">
                         <select name="logoOptions" class="form-control form-control-sm">
 							<option value="noLogo">No Logo</option>
@@ -189,8 +195,8 @@
 									<option value="HOME">HOME</option>
 									<option value="+">+</option>
 									<option value="-">-</option>
-									<option value="Vol +">Vol +</option>
-									<option value="Vol -">Vol -</option>
+									<option value="VOL+">VOL+</option>
+									<option value="VOL-">VOL-</option>
 									<option value="ZL">ZL</option>
 									<option value="ZR">ZR</option>
 								</select>
@@ -210,6 +216,7 @@
 									<option value="emunand">EmuNAND</option>
 									<option value="sysnand">SysNAND</option>
 									<option value="godmode9">GodMode9</option>
+									<option value="hecate">hecate</option>
 									<option value="custom"><em>Custom</em></option>
 								</select>
 							</span>
@@ -231,9 +238,15 @@
 								<option value="DOWN">DOWN</option>
 								<option value="LEFT">LEFT</option>
 								<option value="RIGHT">RIGHT</option>
-								<option value="START" selected="selected">START</option>
-								<option value="SELECT">SELECT</option>
+								<option value="START">START</option>
+								<option value="SELECT" selected="selected">SELECT</option>
 								<option value="HOME">HOME</option>
+								<option value="+">+</option>
+								<option value="-">-</option>
+								<option value="VOL+">VOL+</option>
+								<option value="VOL-">VOL-</option>
+								<option value="ZL">ZL</option>
+								<option value="ZR">ZR</option>
 							</select>
 						</span>
                         <span class="input-field inline"><select name="secondTime" class="form-control form-control-sm">
@@ -254,6 +267,7 @@
 								<option value="decrypt9">Decrypt9</option>
 								<option value="hourglass9">Hourglass9</option>
 								<option value="godmode9">GodMode9</option>
+								<option value="hecate">hecate</option>
 								<option value="custom"><em>Custom</em></option>
 							</select>
 						</span>
