@@ -332,9 +332,9 @@ function redraw() {
     var nandSize = $('select[name=nandSize] option:selected', "#settings").val();
 
     if (nandSize>0) {
-        write(0, curDimensions.lh * 9, 'Detecting Primary Master ... ' + nandSize + 'GB Internal Memory');
+        write(0, curDimensions.lh * 9, 'Detecting Primary Master ... ' + nandSize + 'G Internal Memory');
     } else {
-        write(0, curDimensions.lh * 9, 'Detecting Primary Master ... ' + processor / 2 + 'GB Internal Memory');
+        write(0, curDimensions.lh * 9, 'Detecting Primary Master ... ' + processor / 2 + 'G Internal Memory');
     }
 
 
